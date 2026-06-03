@@ -98,7 +98,7 @@ services:
       file: docker-services.yml
       service: app
     command: ["uwsgi /var/instance/uwsgi/uwsgi_ui.ini"]
-    image: kstu-inveniordm:latest
+    image: nsu-inveniordm:latest
     ports:
       - "${DOCKER_SERVICES_IP_BIND:-127.0.0.1}:5000:5000"
     volumes:
@@ -116,7 +116,7 @@ services:
       file: docker-services.yml
       service: app
     command: ["uwsgi /var/instance/uwsgi/uwsgi_rest.ini"]
-    image: kstu-inveniordm:latest
+    image: nsu-inveniordm:latest
     ports:
       - "${DOCKER_SERVICES_IP_BIND:-127.0.0.1}:5001:5000"
     volumes:
@@ -133,7 +133,7 @@ services:
       file: docker-services.yml
       service: app
     command: ["celery -A invenio_app.celery worker --beat --loglevel=INFO"]
-    image: kstu-inveniordm:latest
+    image: nsu-inveniordm:latest
     volumes:
       - ${INVENIO_UPLOADED_DATA_LOCATION:-/data}:${INVENIO_UPLOADED_DATA_LOCATION:-/data}
     depends_on:
@@ -157,7 +157,7 @@ services:
       file: docker-services.yml
       service: app
     command: ["celery -A invenio_app.celery beat --scheduler invenio_jobs.services.scheduler:RunScheduler --loglevel=INFO"]
-    image: kstu-inveniordm:latest
+    image: nsu-inveniordm:latest
     volumes:
       - ${INVENIO_UPLOADED_DATA_LOCATION:-/data}:${INVENIO_UPLOADED_DATA_LOCATION:-/data}
     depends_on:

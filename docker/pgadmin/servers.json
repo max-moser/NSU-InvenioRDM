@@ -1,12 +1,12 @@
 {
   "Servers": {
     "1": {
-      "Name": "kstu-inveniordm-db",
+      "Name": "nsu-inveniordm-db",
       "Group": "Servers",
-      "Host": "kstu-inveniordm-db-1",
+      "Host": "nsu-inveniordm-db-1",
       "Port": 5432,
       "MaintenanceDB": "postgres",
-      "Username": "kstu-inveniordm",
+      "Username": "nsu-inveniordm",
       "SSLMode": "prefer"
     }
   }

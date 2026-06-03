@@ -1,5 +1,5 @@
 [project]
-name = "kstu-inveniordm"
+name = "nsu-inveniordm"
 description = "Add your description here"
 readme = "README.md"
 version = "14.0.0"
@@ -13,18 +13,18 @@ dependencies = [
   "uwsgi-tools>=1.1.1",
   "lxml-html-clean>=0.1.1",
   "invenio-cli>=1.0.0",
-  "kstu_inveniordm_package",
+  "nsu_inveniordm_package",
   "invenio-assets",
 ]
 
 [tool.uv.sources]
-"kstu_inveniordm_package" = { workspace = true }
+"nsu_inveniordm_package" = { workspace = true }
 invenio-assets = { git = "https://github.com/max-moser/invenio-assets", branch = "mm/pnpm-v11" }
 [tool.uv.workspace]
 members = ["site"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["site/kstu_inveniordm"]
+packages = ["site/nsu_inveniordm"]
 
 [project.optional-dependencies]
 sentry = [

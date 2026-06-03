@@ -1,4 +1,4 @@
-# KSTU InvenioRDM
+# NSU InvenioRDM
 
 Welcome to your InvenioRDM instance.
 

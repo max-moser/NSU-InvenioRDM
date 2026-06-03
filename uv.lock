@@ -4,8 +4,8 @@ requires-python = ">=3.12"
 
 [manifest]
 members = [
-    "kstu-inveniordm",
-    "kstu-inveniordm-package",
+    "nsu-inveniordm",
+    "nsu-inveniordm-package",
 ]
 
 [[package]]
@@ -2659,14 +2659,14 @@ wheels = [
 ]
 
 [[package]]
-name = "kstu-inveniordm"
+name = "nsu-inveniordm"
 version = "14.0.0"
 source = { virtual = "." }
 dependencies = [
     { name = "invenio-app-rdm", extra = ["opensearch2"] },
     { name = "invenio-assets" },
     { name = "invenio-cli" },
-    { name = "kstu-inveniordm-package" },
+    { name = "nsu-inveniordm-package" },
     { name = "lxml-html-clean" },
     { name = "python-dotenv" },
     { name = "uwsgi" },
@@ -2693,7 +2693,7 @@ requires-dist = [
     { name = "invenio-app-rdm", extras = ["opensearch2"], specifier = "~=14.0.0b9.dev0" },
     { name = "invenio-assets", git = "https://github.com/max-moser/invenio-assets?branch=mm%2Fpnpm-v11" },
     { name = "invenio-cli", specifier = ">=1.0.0" },
-    { name = "kstu-inveniordm-package", editable = "site" },
+    { name = "nsu-inveniordm-package", editable = "site" },
     { name = "lxml-html-clean", specifier = ">=0.1.1" },
     { name = "pytest-invenio", marker = "extra == 'tests'", specifier = ">=3.0.0,<4.0.0" },
     { name = "python-dotenv", specifier = ">=0.21.0" },
@@ -2711,7 +2711,7 @@ dev = [
 ]
 
 [[package]]
-name = "kstu-inveniordm-package"
+name = "nsu-inveniordm-package"
 version = "1.0.0"
 source = { editable = "site" }
 

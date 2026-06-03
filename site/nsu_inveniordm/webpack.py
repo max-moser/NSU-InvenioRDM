@@ -1,4 +1,4 @@
-"""JS/CSS Webpack bundles for KSTU InvenioRDM."""
+"""JS/CSS Webpack bundles for NSU InvenioRDM."""
 
 from invenio_assets.webpack import WebpackThemeBundle
 
