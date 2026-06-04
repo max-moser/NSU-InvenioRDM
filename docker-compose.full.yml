@@ -85,7 +85,6 @@ services:
       - web-ui
       - web-api
     ports:
-      - "80:80"
       - "443:443"
     logging:
       driver: json-file
