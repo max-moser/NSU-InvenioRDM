@@ -77,7 +77,9 @@ ENV INVENIO_WEBPACKEXT_NPM_PKG_CLS=pynpm:PNPMPackage
 RUN invenio collect --verbose && \
     mkdir assets templates translations && \
     cp -r /tmp/assets/ ${INVENIO_INSTANCE_PATH}/ && \
-    invenio webpack buildall && \
+    invenio webpack create && \
+    invenio webpack install && \
+    INVENIO_WEBPACKEXT_NPM_PKG_CLS=pynpm:NPMPackage invenio webpack build && \
     cp -r /tmp/static/ ${INVENIO_INSTANCE_PATH}/ && \
     cp -r /tmp/templates/ ${INVENIO_INSTANCE_PATH}/ && \
     cp -r /tmp/translations/ ${INVENIO_INSTANCE_PATH}/ && \
