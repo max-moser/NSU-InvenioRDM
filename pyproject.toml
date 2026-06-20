@@ -14,12 +14,11 @@ dependencies = [
   "lxml-html-clean>=0.1.1",
   "invenio-cli>=1.0.0",
   "nsu_inveniordm_package",
-  "invenio-assets",
 ]
 
 [tool.uv.sources]
 "nsu_inveniordm_package" = { workspace = true }
-invenio-assets = { git = "https://github.com/max-moser/invenio-assets", branch = "mm/pnpm-v11" }
+
 [tool.uv.workspace]
 members = ["site"]
 
