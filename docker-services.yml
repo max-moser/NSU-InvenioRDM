@@ -88,6 +88,9 @@ services:
   mq:
     image: rabbitmq:3-management
     restart: "unless-stopped"
+    environment:
+      - "RABBITMQ_DEFAULT_USER=${INVENIO_RABBITMQ_USER:-guest}"
+      - "RABBITMQ_DEFAULT_PASS=${INVENIO_RABBITMQ_PASSWORD:-guest}"
     hostname: mq
     ulimits:
       nofile:
